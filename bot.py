@@ -102,11 +102,12 @@ async def message_redacted(message:discord.Message):
 
     for word in redacted_words:
         found_index = lower_case_message.find(word)
-        if (found_index != -1):
+        while (found_index != -1):
             need_to_redact = True
             cased_redact_word = redacted_message[found_index : found_index + len(word)]
             redacted_message = redacted_message.replace(cased_redact_word, '[REDACTED]')
             lower_case_message = redacted_message.lower()
+            found_index = lower_case_message.find(word)
 
     if (need_to_redact):
         channel_to_send = message.channel
@@ -149,12 +150,12 @@ async def cmd_games(ctx, num_players : int):
 
     await ctx.send(f'Try playing... {game_name}??')
 
-@bot.command(name='buyBoosterPack', help='Purchase a booster pack of wiggle cards using BitchPoints')
+@bot.command(name='booster', help='Purchase a booster pack of wiggle cards using BitchPoints')
 async def cmd_buy_booster_pack(ctx):
     await ctx.send('Feature not yet implemented.')
 
-@bot.command(name='source', help='Request link to the bot source code.')
+@bot.command(name='source', help='Request link to the bot source code')
 async def cmd_source(ctx):
-    await ctx.send('Feature not yet implemented.')
+    await ctx.send('https://github.com/mholtkamp/dinglebot/blob/main/bot.py')
 
 bot.run(TOKEN)
