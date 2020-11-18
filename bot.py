@@ -21,7 +21,7 @@ master_user_ids = [242449408715653122]
 user_stats = {}
 
 test_emotes = ['💯', '🙀', '💩', '👺', '🐹', '🌮']
-banned_words = ['pubg', 'zeus', 'milf', 'dilf', 'gilf', 'fun', 'mr. nice guy', 'spice', 'trump', 'shunt', 'clussy', 'moist', 'gape', 'gaping', 'yolo', 'twerk', 'shit', 'bitch', 'fuck', 'titty', 'titties']
+banned_words = ['pubg', 'zeus', 'cyka', 'milf', 'dilf', 'gilf', 'mr. nice guy', 'mr nice guy', 'spice', 'trump', 'shunt', 'clussy', 'yolo', 'twerk']
 redacted_words = ['delta point']
 randGen = random.Random(datetime.now())
 
