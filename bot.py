@@ -20,7 +20,7 @@ class UserStat:
 master_user_ids = [242449408715653122]
 user_stats = {}
 
-test_emotes = ['💯', '🙀', '💩', '👺']
+test_emotes = ['💯', '🙀', '💩', '👺', '🐹', '🌮']
 banned_words = ['pubg', 'zeus', 'milf', 'dilf', 'gilf', 'fun', 'mr. nice guy', 'spice', 'trump', 'shunt', 'clussy', 'moist', 'gape', 'gaping', 'yolo', 'twerk', 'shit', 'bitch', 'fuck', 'titty', 'titties']
 redacted_words = ['delta point']
 randGen = random.Random(datetime.now())
@@ -63,7 +63,7 @@ async def message_reaction(message:discord.Message):
     emote_chance = randGen.randint(0,10)
     print(emote_chance)
 
-    if (emote_chance < 2):
+    if (emote_chance == 0):
         emote_list = test_emotes
         emote_resp = randGen.choice(emote_list)
         print(emote_resp)
