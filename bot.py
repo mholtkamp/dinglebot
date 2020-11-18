@@ -32,6 +32,8 @@ async def on_ready():
         f'{bot.user} is connected to the following guild:\n'
         f'{guild.name}(id: {guild.id})')
 
+    await bot.change_presence(activity=discord.Game(name='PUBG'))
+
     # Alert owners when Dinglebot comes online
     for user_id in master_user_ids:
         print(user_id)
